@@ -18,10 +18,7 @@ for line in datain:
     conn[p1].append(p2)
     conn[p2].append(p1)
 del conn['end']
-"""
-for key in conn.keys():
-  print(key,":",conn[key])
-"""
+
 def listcopy(listin):
   listout = []
   for item in listin: listout.append(item)
