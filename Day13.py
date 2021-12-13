@@ -46,3 +46,22 @@ def fullfold(space,instruct):
 
 out2 = fullfold(datasafe,instruct)
 print("Finished writing coordinates to file. Check there!")
+
+def printout():
+  f = open('output.txt')
+  datain = [x.split(',') for x in f.readlines()]
+  datasafe = []
+  for line in datain:
+    [xin,yin]=line
+    datasafe.append([int(xin),int(yin)])
+  xmax = 0
+  ymax = 0
+  for line in datasafe:
+    if line[0]>xmax: xmax = line[0]
+    if line[1]<ymax: ymax = line[1]
+  space = [" "*(xmax+1)]*((-1*ymax+1))
+  for line in datasafe:
+    [xin,yin]=line
+    space[(-1*yin)] = space[(-1*yin)][:(xin)] + '#' + space[(-1*yin)][(xin) + 1:]
+  for line in space: print(line)
+printout()
