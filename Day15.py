@@ -86,10 +86,8 @@ for xpos in range(len(space2[0])):
 print("<<A* P1:>>")
 start = time.process_time()
 t1 = A_star(datasafe)
-print("Total Time Taken: ", round((time.process_time() - start) * 1000000),
-      "us.")
+print("Total Time Taken: ", round((time.process_time() - start) * 1000000),"us.")
 print("<<A* P2>>")
 start = time.process_time()
 t2 = A_star(space2)
-print("Total Time Taken: ", round((time.process_time() - start) * 1000000),
-      "us.")
+print("Total Time Taken: ", round((time.process_time() - start) * 1000000),"us.")
