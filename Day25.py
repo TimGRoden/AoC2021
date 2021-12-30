@@ -37,7 +37,6 @@ def findstill(spacein):
   t2 = []
   while True:
     steps += 1
-    if steps%100==0:print("Completed",steps,"steps.")
     t2 = move(t1)
     if t1==t2:
       return (t1,steps)
@@ -45,4 +44,3 @@ def findstill(spacein):
 
 results = findstill(initspace)
 print("Still found after",results[1],"steps.")
-#for line in results[0]: print(line)
